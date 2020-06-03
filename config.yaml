@@ -1,0 +1,84 @@
+# Project definitions (do not edit)
+Task: PPP-DLC
+scorer: Jaime
+date: May29
+
+# Project path (change when moving around)
+project_path: /home/jaime/Github/video-snipits/notebooks/PPP-DLC-Jaime-2020-05-29
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-102614_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-111329_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP3-180705-135030_Giulia-180720-095642_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP3-180705-135030_Giulia-180720-105120_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-090003_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-090003_Cam2.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP3-180705-135030_Giulia-180720-090328_Cam2.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-102614_Cam2.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-094359_Cam2.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-094359_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP1-171017-081744_Eelke-171027-111329_Cam2.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP3-180705-135030_Giulia-180720-105120_Cam2.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP3-180705-135030_Giulia-180720-114025_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP4_1-191004-084000_Giulia-191004-094448_Cam1.avi:
+    crop: 0, 640, 0, 480
+  /home/jaime/Github/video-snipits/data/videos_full/PPP4_1-191004-084000_Giulia-191004-103229_Cam2.avi:
+    crop: 0, 640, 0, 480
+bodyparts:
+- nose
+- L_ear
+- R_ear
+- tail
+start: 0
+stop: 1
+numframes2pick: 20
+
+# Plotting configuration
+skeleton:
+- nose
+- L_ear
+- R_ear
+- tail
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 8
+alphavalue: 0.7
+colormap: jet
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+resnet:
+snapshotindex: -1
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_50
+default_augmenter: default

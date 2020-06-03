@@ -1,0 +1,9 @@
+
+.spyproject/*
+
+videos/*
+tanks/*
+videos_notused/*
+metafiles/*
+
+*.jpg
